@@ -2,7 +2,8 @@
 
 echo "THIS PACKAGE WILL ASSIST IN ERASING YOUR DEVICE, YOU AGREE TO USE THIS AT YOUR OWN RISK. THANKS FOR THE METHOD /u/changemylife99."
 echo "If you would like to quit, exit Cydia NOW!"
-sleep 5
+echo "Sleeping for 10 seconds in case you want to quit..."
+sleep 10
 
 apt-get update
 
