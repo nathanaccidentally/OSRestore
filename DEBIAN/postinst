@@ -36,94 +36,10 @@ echo "Removed all contents except for Library from /var/mobile."
 echo "Removing the contents of /var/mobile/Library except for carrier settings and important files..."
 echo "This step could take the longest."
 
-cd /var/mobile/Library/
+echo "Final erase starting."
+shopt -s extglob
 
-echo "Moved to /var/mobile/Library. Final erase starting."
-
-rm -R Accessibility
-rm -R Accounts
-rm -R AddressBook
-rm -R AggregateDictionary
-rm -R ApplePushService
-rm -R Application Support
-rm -R Assistant
-rm -R BackBoard
-rm -R BullitenBoard
-rm -R Caches
-rm -R Calender
-rm -R CallDirectory
-rm -R CallHistoryDB
-rm -R CallHistoryTransactions
-rm -R CallServices
-rm -R ColorFlow 3
-rm -R com.apple.internal.ck
-rm -R com.apple.iTunesStore
-rm -R com.apple.itunesstored
-rm -R com.apple.nsurlsessionid
-rm -R Cookies
-rm -R CoreDuet
-rm -R CoreFollowUp
-rm -R CrashReporter
-rm -R Cydia
-rm -R DataAccess
-rm -R DeviceRegistry.state
-rm -R DifferentialPrivacy
-rm -R DuetActivityScheudler
-rm -R DuetExpertCenter
-rm -R ExternalAccessory
-rm -R FairPlay
-rm -R FileProvider
-rm -R FlurryFiles
-rm -R FrontBoard
-rm -R GameKit
-rm -R GeoServices
-rm -R Health
-rm -R homed
-rm -R iCleaner
-rm -R IdentityServices
-rm -R Inboxes
-rm -R Keyboard
-rm -R KeyboardServices
-rm -R LASD
-rm -R locationd
-rm -R LockHTML
-rm -R Logs
-rm -R mad
-rm -R Mail
-rm -R MediaStream
-rm -R Mobile Documents
-rm -R MusicLibrary
-rm -R NanoTimeKit
-rm -R News
-rm -R Notes
-rm -R OnDemandResources
-rm -R OTALogging
-rm -R Passes
-rm -R PickPocket
-rm -R Reflectrix
-rm -R ReplayKit
-rm -R ResponseKit
-rm -R Safari
-rm -R Saved Application State
-rm -R SMS
-rm -R SoftwareUpdate
-rm -R Spotlight
-rm -R SpringBoard
-rm -R Stats
-rm -R Suggestions
-rm -R SyncedPreferences
-rm -R TCC
-rm -R UserConfigurationProfiles
-rm -R Voicemail
-rm -R VoiceServices
-rm -R VoiceTrigger
-rm -R WatchConnectivity
-rm -R WebClips
-rm -R WebKit
-rm -R WelcomeMat
-rm -R Springtomize
-rm -R Boxy
-rm -R AppCake
+rm -R /var/mobile/Library/* !(Carrier Bundle.Bundle|Carrier Bundles|CarrierDefault.Bundle|Operator Bundle.Bundle)
 
 echo "Removing stashed tweaks..."
 cd /var/db/
